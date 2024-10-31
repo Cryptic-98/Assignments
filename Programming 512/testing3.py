@@ -5,7 +5,7 @@ class Person:
         self.id = id
 
     def __str__(self):
-        return f"{self.name}, Age: {self.age}, ID: {self.id}"
+        return f"Name: {self.name}\nAge: {self.age}\nID: {self.id}\n"
 
 
 class Student(Person):
@@ -14,7 +14,7 @@ class Student(Person):
         self.major = major
         self.enrolled_courses = []
 
-    def enrol(self, course):
+    def enroll(self, course):
         if course.add_student(self):
             self.enrolled_courses.append(course)
             print(f"{self.name} has enrolled in {course.name}.")
@@ -89,56 +89,48 @@ class University:
                 return course
         return None
 
+university = University("University")
 
-# Demo script
-if __name__ == "__main__":
-    university = University("Sample University")
+course1 = Course("512", "Mathematics", 5)
+course2 = Course("622", "Accounting", 5)
 
-    # Create courses
-    course1 = Course("CS101", "Introduction to Computer Science", 2)
-    course2 = Course("MATH101", "Calculus I", 3)
+university.add_course(course1)
+university.add_course(course2)
 
-    university.add_course(course1)
-    university.add_course(course2)
+student1 = Student("Thapelo", 20, "402165574", "BSCIT")
+student2 = Student("Pete", 21, "456120154", "BCOM")
+student3 = Student("George", 22, "411523369", "BCOM")
 
-    # Create students
-    student1 = Student("Alice", 20, "S001", "Computer Science")
-    student2 = Student("Bob", 21, "S002", "Mathematics")
-    student3 = Student("Charlie", 22, "S003", "Mathematics")
+university.add_student(student1)
+university.add_student(student2)
+university.add_student(student3)
 
-    university.add_student(student1)
-    university.add_student(student2)
-    university.add_student(student3)
+professor1 = Professor("Dr. Smith", 45, "RoyalG", "Computer Science")
+professor2 = Professor("Dr. Johnson", 50, "SilasT", "Mathematics")
 
-    # Create professors
-    professor1 = Professor("Dr. Smith", 45, "P001", "Computer Science")
-    professor2 = Professor("Dr. Johnson", 50, "P002", "Mathematics")
+university.add_professor(professor1)
+university.add_professor(professor2)
 
-    university.add_professor(professor1)
-    university.add_professor(professor2)
+professor1.assign_course(course1)
+professor2.assign_course(course2)
 
-    # Assign professors to courses
-    professor1.assign_course(course1)
-    professor2.assign_course(course2)
 
-    # Enroll students in courses
-    student1.enrol(course1)
-    student2.enrol(course2)
-    student3.enrol(course2)  # Should succeed
-    student3.enrol(course1)   # Should fail due to capacity
+student1.enroll(course1)
+student2.enroll(course2)
+student3.enroll(course2)
+student3.enroll(course1)   
 
-    # Drop a student from a course
-    student2.drop(course2)
 
-    # Print out the state of courses, students, and professors
-    print("\nCourses:")
-    for course in university.courses:
-        print(course)
+student2.drop(course2)
 
-    print("\nStudents:")
-    for student in university.students:
-        print(student)
+print("\nCourses:")
+for course in university.courses:
+    print(course)
 
-    print("\nProfessors:")
-    for professor in university.professors:
-        print(professor)
+print("\nStudents:")
+for student in university.students:
+    print(student)
+
+print("\nProfessors:")
+for professor in university.professors:
+    print(professor)
