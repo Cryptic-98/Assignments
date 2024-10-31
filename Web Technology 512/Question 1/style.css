@@ -1,0 +1,38 @@
+* {
+  font-family: "Inder", sans-serif;
+  padding: 0;
+  margin: 0;
+  /* outline: 2px red solid; */
+}
+.container {
+  margin-left: 15px;
+}
+h1 {
+  margin-bottom: 20px;
+}
+p {
+  margin-bottom: 5px;
+}
+#amount {
+  margin-bottom: 10px;
+}
+table {
+  border-collapse: collapse;
+  margin-bottom: 5px;
+}
+th {
+  background-color: lightblue;
+  border: 1px solid;
+  padding: 5px;
+}
+td {
+  text-align: center;
+  border: 1px solid;
+}
+button {
+  background-color: blue;
+  color: white;
+  font-size: 15px;
+  border: none;
+  padding: 5px;
+}

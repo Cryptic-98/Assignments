@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>RSVP</title>
+  </head>
+  <body>
+    <div class="box">
+      <div class="form_container">
+        <form>
+          <h1>Bumble's Family 25th Anniversary Invitation</h1>
+          <label for="fullName">Full Name: </label><br />
+          <input type="text" name="fullName" id="fullName" required /><br />
+          <label for="phoneNumber">Phone Number: </label><br />
+          <input
+            type="number"
+            name="phoneNumber"
+            id="phoneNumber"
+            required
+          /><br />
+          <label for="emailAddress">Email Address</label><br />
+          <input
+            type="email"
+            name="emailAddress"
+            id="emailAddress"
+            required
+          /><br />
+          <label for="numberOfAttendees">Number of Attendees</label><br />
+          <input
+            type="number"
+            name="numberOfAttendees"
+            id="numberOfAttendees"
+            required
+          /><br />
+          <label for="arrivalTime">Arrival Time: </label>
+          <input type="time" name="arrivalTime" id="arrivalTime" />
+          <label for="menuPreference">Menu Preference: </label><br />
+          <select name="menuPreference" id="menuPreference" required>
+            <option value="vegan">Vegan</option>
+            <option value="non_vegan">Non-Vegan</option></select
+          ><br />
+          <label for="tableOption">Table Option</label><br />
+          <select name="tableOption" id="tableOption" required>
+            <option value="Table_1">Table 1</option>
+            <option value="Table_2">Table 2</option>
+            <option value="Table_3">Table 3</option>
+            <option value="Table_4">Table 4</option>
+            <option value="Table_5">Table 5</option></select
+          ><br />
+          <a href="confirmation_card.html"
+            ><button onclick="submit()">Submit</button></a
+          >
+        </form>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

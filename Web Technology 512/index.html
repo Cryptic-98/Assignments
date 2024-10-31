@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      * {
+        font-family: "Inder", sans-serif;
+        padding: 0;
+        margin: 0;
+        outline: 2px red solid;
+      }
+      #heading {
+        margin-bottom: 20px;
+        margin-left: 15px;
+      }
+      #exchange {
+        margin-left: 15px;
+      }
+      #amount {
+        height: 20px;
+        width: 50%;
+      }
+      table {
+        width: 50%;
+      }
+      #table_heading {
+        background-color: aqua;
+      }
+      #exchange_button {
+        background-color: blue;
+        color: white;
+      }
+    </style>
+    <script>
+      const amount = document.getElementById("amount");
+      USD = 18.24;
+      EUR = 19.89;
+      GBP = 23.6;
+      JPY = 0.12;
+      AUD = 12.22;
+      CAD = 13.31;
+      CHF = 20.56;
+      CNY = 2.51;
+      INR = 0.22;
+      let amount_converting = Number(amount.value);
+
+      in_usd = amount_converting * USD;
+      in_eur = amount_converting * EUR;
+      in_gbp = amount_converting * GBP;
+      in_jpy = amount_converting * JPY;
+      in_aud = amount_converting * AUD;
+      in_cad = amount_converting * CHF;
+      in_chf = amount_converting * CHF;
+      in_cny = amount_converting * CNY;
+      in_inr = amount_converting * INR;
+
+      function convert() {}
+    </script>
+    <title>Exchange Rate Calculator</title>
+  </head>
+  <body>
+    <h1 id="heading">Exchange Rate Calculator</h1>
+
+    <div id="exchange">
+      <p>Please Enter The Amount you want in ZAR</p>
+      <input type="number" name="amount" id="amount" />
+      <div id="exhange_table">
+        <table>
+          <tr id="table_heading">
+            <th>Currency</th>
+            <th>Today's Exchange Rate</th>
+            <th>Amount You Will Recieve in ZAR Currency</th>
+          </tr>
+          <tr>
+            <td id="currency"></td>
+            <td id="exchange_rate"></td>
+            <td id="amount_in_zar"></td>
+          </tr>
+          <tr>
+            <td id="currency"></td>
+            <td id="exchange_rate"></td>
+            <td id="amount_in_zar"></td>
+          </tr>
+          <tr>
+            <td id="currency"></td>
+            <td id="exchange_rate"></td>
+            <td id="amount_in_zar"></td>
+          </tr>
+          <tr>
+            <td id="currency"></td>
+            <td id="exchange_rate"></td>
+            <td id="amount_in_zar"></td>
+          </tr>
+          <tr>
+            <td id="currency"></td>
+            <td id="exchange_rate"></td>
+            <td id="amount_in_zar"></td>
+          </tr>
+          <tr>
+            <td id="currency"></td>
+            <td id="exchange_rate"></td>
+            <td id="amount_in_zar"></td>
+          </tr>
+          <tr>
+            <td id="currency"></td>
+            <td id="exchange_rate"></td>
+            <td id="amount_in_zar"></td>
+          </tr>
+          <tr>
+            <td id="currency"></td>
+            <td id="exchange_rate"></td>
+            <td id="amount_in_zar"></td>
+          </tr>
+          <tr>
+            <td id="currency"></td>
+            <td id="exchange_rate"></td>
+            <td id="amount_in_zar"></td>
+          </tr>
+          <tr>
+            <td id="currency"></td>
+            <td id="exchange_rate"></td>
+            <td id="amount_in_zar"></td>
+          </tr>
+        </table>
+      </div>
+      <div id="exchange_button_section">
+        <button id="exchange_button" onclick="convert()">
+          Convert Currency to ZAR
+        </button>
+      </div>
+    </div>
+  </body>
+</html>

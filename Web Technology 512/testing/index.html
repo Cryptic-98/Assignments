@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="heading">Exchange Rate Calculator</h1>
+    <input type="number" id="amount" />
+    <table>
+      <tr id="table_heading">
+        <th>Currency</th>
+        <th>Today's Exchange Rate</th>
+        <th>Amount You Will Recieve in ZAR Currency</th>
+      </tr>
+      <tr>
+        <td id="currency"></td>
+        <td id="exchange_rate"></td>
+        <td id="amount_in_zar"></td>
+      </tr>
+    </table>
+    <button id="convert_button" onclick="convert()"></button>
+    <script src="script.js"></script>
+  </body>
+</html>

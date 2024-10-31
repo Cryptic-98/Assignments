@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Currency Convertor</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Exchange Rate Calculator</h1>
+      <p>Please Enter The Amount you want to Exchange to ZAR:</p>
+      <input type="number" id="amount" />
+      <table>
+        <tr>
+          <th>Currency</th>
+          <th>Today's Exchange Rate</th>
+          <th>Amount You will Recieve in ZAR Currency</th>
+        </tr>
+        <tbody id="table_body">
+          <tr>
+            <td id="currency_usd"></td>
+            <td id="exchange_rate_usd"></td>
+            <td id="converted_amount_usd"></td>
+          </tr>
+          <tr>
+            <td id="currency_eur"></td>
+            <td id="exchange_rate_eur"></td>
+            <td id="converted_amount_eur"></td>
+          </tr>
+          <tr>
+            <td id="currency_gbp"></td>
+            <td id="exchange_rate_gbp"></td>
+            <td id="converted_amount_gbp"></td>
+          </tr>
+          <tr>
+            <td id="currency_jpy"></td>
+            <td id="exchange_rate_jpy"></td>
+            <td id="converted_amount_jpy"></td>
+          </tr>
+          <tr>
+            <td id="currency_aud"></td>
+            <td id="exchange_rate_aud"></td>
+            <td id="converted_amount_aud"></td>
+          </tr>
+          <tr>
+            <td id="currency_cad"></td>
+            <td id="exchange_rate_cad"></td>
+            <td id="converted_amount_cad"></td>
+          </tr>
+          <tr>
+            <td id="currency_chf"></td>
+            <td id="exchange_rate_chf"></td>
+            <td id="converted_amount_chf"></td>
+          </tr>
+          <tr>
+            <td id="currency_cny"></td>
+            <td id="exchange_rate_cny"></td>
+            <td id="converted_amount_cny"></td>
+          </tr>
+          <tr>
+            <td id="currency_inr"></td>
+            <td id="exchange_rate_inr"></td>
+            <td id="converted_amount_inr"></td>
+          </tr>
+        </tbody>
+      </table>
+      <button onclick="convert()">Convert Currency to ZAR</button>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
